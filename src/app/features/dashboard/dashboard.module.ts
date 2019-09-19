@@ -34,7 +34,7 @@ export interface DashboardState {
     ]),
     EffectsModule.forFeature([
       ItemsEffects
-    ])
+    ]),
   ],
 })
 export class DashboardModule { }

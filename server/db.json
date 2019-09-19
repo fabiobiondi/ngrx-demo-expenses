@@ -1,13 +1,6 @@
 {
   "products": [
     {
-      "text": "wwr",
-      "category": "home",
-      "amount": 33,
-      "id": 2,
-      "date": 1568850246488
-    },
-    {
       "text": "aaaa",
       "amount": 111,
       "category": "tax",
