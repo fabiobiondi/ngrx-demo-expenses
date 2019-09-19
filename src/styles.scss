@@ -1,0 +1,51 @@
+// customize bootstrap theme
+$primary: #4fb948;
+$input-btn-border-width: 0px;
+$input-btn-focus-width: 0px;
+
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+$btn-padding-x: 30px;
+
+$input-border-radius: 0;
+$custom-select-border-radius: 0;
+$dropdown-inner-border-radius: 0;
+$dropdown-border-radius: 0;
+$badge-border-radius: 20px;
+
+@import "~bootstrap/scss/bootstrap";
+
+
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body	{
+  background:url(assets/bg.png) center bottom fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.fa, .fas, .far {
+  cursor: pointer;
+}
+
+input, select {
+  border-bottom: 2px solid lightgrey !important;
+  margin-top: 2px;
+}
+
+select.form-control {
+  -webkit-appearance: none;
+}
+
+
+.transparent-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+}
+
+.vscroller {
+  overflow-y: auto;
+}

@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "text": "wwr",
+      "category": "home",
+      "amount": 33,
+      "id": 2,
+      "date": 1568850246488
+    },
+    {
+      "text": "aaaa",
+      "amount": 111,
+      "category": "tax",
+      "date": 1568850246488,
+      "id": 3
+    },
+    {
+      "text": "XYZ",
+      "amount": 500,
+      "category": "home",
+      "date": 1568850246488,
+      "id": 4
+    },
+    {
+      "text": "aaaa",
+      "amount": 3333,
+      "category": "home",
+      "date": 1568853204384,
+      "id": 5
+    }
+  ]
+}
