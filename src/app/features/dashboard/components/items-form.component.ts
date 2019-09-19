@@ -27,6 +27,7 @@ export class ItemsFormComponent {
   @Output() save: EventEmitter<Partial<Item>> = new EventEmitter();
 
   saveHandler(form: NgForm) {
-    this.save.emit({ ...form.value, date: Date.now()})
+    this.save.emit({ ...form.value, date: Date.now()});
+    form.reset();
   }
 }
