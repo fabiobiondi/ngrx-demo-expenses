@@ -4,7 +4,7 @@ const initialState = ['tax', 'home', 'travel'];
 
 // fake reducer
 export const categoriesReducer = createReducer(
-  {...initialState}
+  [...initialState]
   // add (TODO)
   // delete (TODO)
   // edit (TODO)
