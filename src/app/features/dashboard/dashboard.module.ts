@@ -14,6 +14,7 @@ import { UiState } from './store/reducers/ui.reducer';
 import { ItemsFiltersComponent } from './components/items-filters.component';
 import { ItemsListComponent } from './components/items-list.component';
 import { ItemsFormComponent } from './components/items-form.component';
+import { ItemsService } from './services/items.service';
 
 
 export interface DashboardState {
@@ -36,5 +37,8 @@ export interface DashboardState {
       ItemsEffects
     ]),
   ],
+  providers: [
+    ItemsService
+  ]
 })
 export class DashboardModule { }

@@ -1,23 +1,20 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { of } from 'rxjs';
+import { catchError, map, mergeMap } from 'rxjs/operators';
 import {
   addItem, addItemFailed, addItemSuccess,
   deleteItem, deleteItemFailed, deleteItemSuccess,
   loadItems, loadItemsFailed, loadItemsSuccess
 } from '../actions/items.actions';
-import { catchError, map, mergeMap, switchMap } from 'rxjs/operators';
-import { Item } from '../../../../model/item';
-import { of } from 'rxjs';
-import { Store } from '@ngrx/store';
-import { AppState } from '../../../../app.module';
+import { ItemsService } from '../../services/items.service';
 
 @Injectable()
 export class ItemsEffects {
 
   loadItems$ = createEffect(() => this.actions$.pipe(
     ofType(loadItems),
-    switchMap(() => this.http.get<Item[]>('http://localhost:3000/products')
+    mergeMap(() => this.itemsService.loadItems()
       .pipe(
         map(result => loadItemsSuccess({ items: result})),
         catchError(() => of(loadItemsFailed()))
@@ -27,7 +24,7 @@ export class ItemsEffects {
 
   deleteItem$ = createEffect(() => this.actions$.pipe(
     ofType(deleteItem),
-    switchMap((action) => this.http.delete(`http://localhost:3000/products/${action.id}`)
+    mergeMap((action) => this.itemsService.deleteItem(action.id)
       .pipe(
         map(() => deleteItemSuccess({ id: action.id})),
         catchError( () => of(deleteItemFailed()))
@@ -35,10 +32,9 @@ export class ItemsEffects {
     )
   ));
 
-
   addItem$ = createEffect(() => this.actions$.pipe(
     ofType(addItem),
-    mergeMap(action => this.http.post<Item>('http://localhost:3000/products', action.item)
+    mergeMap(action => this.itemsService.addItem(action.item)
       .pipe(
         map(result => addItemSuccess({ item: result })),
         catchError( () => of(addItemFailed()))
@@ -47,8 +43,7 @@ export class ItemsEffects {
   ));
 
   constructor(
-    private http: HttpClient,
     private actions$: Actions,
-    private store: Store<AppState>
+    private itemsService: ItemsService
   ) {}
 }

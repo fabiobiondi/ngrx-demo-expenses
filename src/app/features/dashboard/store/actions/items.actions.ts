@@ -17,12 +17,12 @@ export const loadItemsFailed = createAction(
 
 export const addItem = createAction(
   '[Items] add',
-  props<{ item: Partial<Item>}>()
+  props<{ item: any}>()
 );
 
 export const addItemSuccess = createAction(
   '[Items] add success',
-  props<{ item: Item}>()
+  props<{ item: any}>()
 );
 
 export const addItemFailed = createAction(

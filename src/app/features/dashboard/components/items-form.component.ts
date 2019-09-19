@@ -13,7 +13,7 @@ import { NgForm } from '@angular/forms';
       <input placeholder="Expense Description" type="text" name="text" [ngModel] class="form-control" required>
       <input placeholder="Amount ($)" type="number" name="amount" [ngModel] class="form-control" required>
 
-      <select [ngModel] name="category" class="form-control">
+      <select [ngModel] name="category" class="form-control" required>
         <option [value]="null">Select Category</option>
         <option *ngFor="let category of categories">{{category}}</option>
       </select>
