@@ -34,7 +34,9 @@ import { Item } from '../../model/item';
       (delete)="deleteItem($event)"
     ></fb-items-list>
     
-    TOTAL: {{total$ | async | currency}}
+    <div class="badge badge-primary d-flex justify-content-end">
+      <span class="h4">TOTAL: {{total$ | async | currency}}</span>
+    </div>
   `,
 })
 export class ItemsComponent {

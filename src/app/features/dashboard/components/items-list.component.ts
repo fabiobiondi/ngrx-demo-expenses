@@ -16,7 +16,7 @@ import { Item } from '../../../model/item';
     
     <!--list-->
     <ng-template #list>
-      <div *ngFor="let item of items">
+      <div *ngFor="let item of items" class="bg-light p-2 mt-1">
         <div class="d-flex justify-content-between">
           <div>
             {{item.date | date: 'dd MMM'}} - {{item.text}}
@@ -28,7 +28,6 @@ import { Item } from '../../../model/item';
             <i class="fa fa-trash-alt" (click)="delete.emit(item.id)"></i>
           </div>
         </div>
-        <hr>
       </div>
     </ng-template>
   `,
