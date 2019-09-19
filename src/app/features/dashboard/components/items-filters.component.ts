@@ -15,7 +15,7 @@ import { UiFilterState } from '../store/reducers/ui.reducer';
         type="range" min="0" max="1000" step="10"
         [(ngModel)]="formState.minAmount"
         value="0"
-        (input)="setFilterHandler()"
+        (change)="setFilterHandler()"
       >
       <!--Select a category-->
       <span
