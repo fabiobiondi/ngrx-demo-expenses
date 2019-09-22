@@ -46,7 +46,7 @@ import { getDashboard } from './store/reducers';
     </div>
   `,
 })
-export class ItemsComponent {
+export class DashboardComponent {
   items$: Observable<Item[]> ; // = this.store.pipe(select(getItemsFiltered));
   categories$: Observable<string[]> ; // = this.store.pipe(select(getCategories));
   filter$: Observable<UiFilterState> ; // = this.store.pipe(select(getFilterConfig));

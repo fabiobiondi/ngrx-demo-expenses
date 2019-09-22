@@ -27,6 +27,13 @@
       "category": "home",
       "date": 1569154170381,
       "id": 6
+    },
+    {
+      "text": "Cat food",
+      "amount": 45,
+      "category": "home",
+      "date": 1569192746118,
+      "id": 7
     }
   ]
 }

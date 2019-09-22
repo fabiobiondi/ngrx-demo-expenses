@@ -3,19 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { FormsModule } from '@angular/forms';
-import { StoreModule } from '@ngrx/store';
-import { RouterModule } from '@angular/router';
-import { reducers } from './store/reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { ItemsEffects } from './store/effects/items.effects';
 import { Item } from '../../model/item';
-import { ItemsComponent } from './dashboard.component';
+import { DashboardComponent } from './dashboard.component';
 import { UiState } from './store/reducers/ui.reducer';
 import { ItemsFiltersComponent } from './components/items-filters.component';
 import { ItemsListComponent } from './components/items-list.component';
 import { ItemsFormComponent } from './components/items-form.component';
 import { ItemsService } from './services/items.service';
-import { categoriesReducer } from './store/reducers/categories.reducer';
 
 
 export interface DashboardState {
@@ -25,12 +21,11 @@ export interface DashboardState {
 }
 
 @NgModule({
-  declarations: [ItemsComponent, ItemsFiltersComponent, ItemsListComponent, ItemsFormComponent],
+  declarations: [DashboardComponent, ItemsFiltersComponent, ItemsListComponent, ItemsFormComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     FormsModule,
-    StoreModule.forFeature('dashboard', reducers),
     DashboardRoutingModule,
     EffectsModule.forFeature([
       ItemsEffects
