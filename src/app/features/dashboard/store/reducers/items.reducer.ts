@@ -8,7 +8,7 @@ import {
 
 const initialState: Item[] = [];
 
-export const productReducer = createReducer(
+export const itemsReducer = createReducer(
   initialState,
   on(loadItemsSuccess, (state, action) => [...action.items ]),
   on(deleteItemSuccess, (state, action) => state.filter(p => p.id !== action.id)),

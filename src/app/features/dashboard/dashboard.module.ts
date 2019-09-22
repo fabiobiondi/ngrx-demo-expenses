@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
-import { RouterModule } from '@angular/router';
 import { reducers } from './store/reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { ItemsEffects } from './store/effects/items.effects';
