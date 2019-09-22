@@ -14,6 +14,7 @@ export const loadItemsFailed = createAction(
   '[Items] load failed',
 );
 
+/*
 export const addItem = createAction(
   '[Items] add',
   props<{ item: Partial<Item>}>()
@@ -27,6 +28,7 @@ export const addItemSuccess = createAction(
 export const addItemFailed = createAction(
   '[Items] add failed',
 );
+*/
 
 export const deleteItem = createAction(
   '[Items] delete',
