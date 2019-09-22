@@ -32,7 +32,8 @@ import { UiFilterState } from '../store/reducers/ui.reducer';
     <!--Open filter button-->
     <ng-template #showFilterBtn>
       <div class="d-flex justify-content-end align-items-center">
- v      </div>
+        <button class="badge bg-dark text-white" (click)="openFilter.emit()">Show Filter</button>
+      </div>
     </ng-template>
     
     <hr>
