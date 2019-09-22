@@ -41,7 +41,7 @@ import { getDashboard } from './store/reducers';
     
     <div class="d-flex justify-content-end">
       <span class="badge badge-primary">
-        <span class="h4">TOTAL: {{total$ | async | currency}}</span>
+        <span class="h4">TOTAL: 0</span>
       </span>
     </div>
   `,
@@ -50,11 +50,7 @@ export class ItemsComponent {
   items$: Observable<Item[]> ; // = this.store.pipe(select(getItemsFiltered));
   categories$: Observable<string[]> ; // = this.store.pipe(select(getCategories));
   filter$: Observable<UiFilterState> ; // = this.store.pipe(select(getFilterConfig));
-  total$: Observable<number> ; // = this.store.pipe(select(getTotal));
 
-  constructor(private store: Store<AppState>) {
-    // this.store.dispatch(loadItems());
-  }
 
   saveItem(item: Partial<Item> ) {
     console.log(item);
