@@ -30,9 +30,7 @@ export interface DashboardState {
     DashboardRoutingModule,
     FormsModule,
     StoreModule.forFeature('dashboard', reducers),
-    RouterModule.forChild([
-      { path: '', component: ItemsComponent}
-    ]),
+    DashboardRoutingModule,
     EffectsModule.forFeature([
       ItemsEffects
     ]),
