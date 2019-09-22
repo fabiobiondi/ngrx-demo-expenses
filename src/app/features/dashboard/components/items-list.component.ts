@@ -8,7 +8,7 @@ import { Item } from '../../../model/item';
 
     <!--nothing to show-->
     <div
-      *ngIf="!items.length; else list"
+      *ngIf="!items?.length; else list"
       class="alert alert-warning" 
     >
       No Items

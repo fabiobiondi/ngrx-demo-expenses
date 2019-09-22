@@ -45,32 +45,37 @@ import { Item } from '../../model/item';
   `,
 })
 export class ItemsComponent {
-  items$: Observable<Item[]> = this.store.pipe(select(getItemsFiltered));
-  categories$: Observable<string[]> = this.store.pipe(select(getCategories));
-  filter$: Observable<UiFilterState> = this.store.pipe(select(getFilterConfig));
-  total$: Observable<number> = this.store.pipe(select(getTotal));
+  items$: Observable<Item[]> ; // = this.store.pipe(select(getItemsFiltered));
+  categories$: Observable<string[]> ; // = this.store.pipe(select(getCategories));
+  filter$: Observable<UiFilterState> ; // = this.store.pipe(select(getFilterConfig));
+  total$: Observable<number> ; // = this.store.pipe(select(getTotal));
 
   constructor(private store: Store<AppState>) {
     this.store.dispatch(loadItems());
   }
 
   saveItem(item: Partial<Item> ) {
-    this.store.dispatch(addItem({ item }));
+    console.log(item);
+    // this.store.dispatch(addItem({ item }));
   }
 
   deleteItem(id: number) {
-    this.store.dispatch(deleteItem({ id }));
+    console.log(id);
+    // this.store.dispatch(deleteItem({ id }));
   }
 
   setFilterHandler(filter: UiFilterState) {
-    this.store.dispatch(setFilter({ filter }));
+    console.log(filter);
+    // this.store.dispatch(setFilter({ filter }));
   }
 
   openFilterPanelHandler() {
-    this.store.dispatch(openFilterPanel());
+    console.log('open filter panel');
+    // this.store.dispatch(openFilterPanel());
   }
 
   closeFilterPanelHandler() {
-    this.store.dispatch(closeFilterPanel());
+    console.log('open filter panel');
+    // this.store.dispatch(closeFilterPanel());
   }
 }
