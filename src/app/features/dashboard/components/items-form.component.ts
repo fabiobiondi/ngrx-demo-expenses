@@ -7,7 +7,6 @@ import { NgForm } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     
-    <h2>ADD EXPENSE</h2>
     <!--FORM-->
     <form #f="ngForm" (ngSubmit)="saveHandler(f)">
       <input placeholder="Expense Description" type="text" name="text" [ngModel] class="form-control" required>

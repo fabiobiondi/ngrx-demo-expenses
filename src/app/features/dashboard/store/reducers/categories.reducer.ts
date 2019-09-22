@@ -9,3 +9,4 @@ export const categoriesReducer = createReducer(
   // delete (TODO)
   // edit (TODO)
 );
+

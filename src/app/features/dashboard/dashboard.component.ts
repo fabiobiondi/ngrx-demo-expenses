@@ -14,11 +14,14 @@ import { UiFilterState } from './store/reducers/ui.reducer';
 import { Item } from '../../model/item';
 
 @Component({
-  selector: 'fb-items',
+  selector: 'fb-dashboard',
   template: `
+
+    <h2 class="text-center">EXPENSE MANAGER</h2>
+    
     <fb-items-form
       [categories]="categories$ | async"
-      (save)="saveItem($event)"
+    (save)="saveItem($event)"
     ></fb-items-form>
     
     <fb-items-filters
@@ -34,8 +37,10 @@ import { Item } from '../../model/item';
       (delete)="deleteItem($event)"
     ></fb-items-list>
     
-    <div class="badge badge-primary d-flex justify-content-end">
-      <span class="h4">TOTAL: {{total$ | async | currency}}</span>
+    <div class="d-flex justify-content-end">
+      <span class="badge badge-primary">
+        <span class="h4">TOTAL: {{total$ | async | currency}}</span>
+      </span>
     </div>
   `,
 })

@@ -20,6 +20,13 @@
       "category": "tax",
       "date": 1568865057846,
       "id": 5
+    },
+    {
+      "text": "2r23",
+      "amount": 14,
+      "category": "home",
+      "date": 1569154170381,
+      "id": 6
     }
   ]
 }
