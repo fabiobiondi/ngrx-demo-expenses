@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server": "json-server --watch server/db.json"
+    "server": "json-server --watch server/db.json",
+    "serve": "http-server dist/ngrx-tutorials"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +39,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "http-server": "^0.11.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "json-server": "^0.15.0",
