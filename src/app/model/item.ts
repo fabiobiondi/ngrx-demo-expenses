@@ -1,7 +1,7 @@
 export interface Item {
   id?: number;
-  date: number;
   text: string;
   amount: number;
+  date: number;
   category?: string;
 }

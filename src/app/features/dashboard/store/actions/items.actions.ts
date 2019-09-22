@@ -13,22 +13,20 @@ export const loadItemsSuccess = createAction(
 export const loadItemsFailed = createAction(
   '[Items] load failed',
 );
-/*
+
 export const addItem = createAction(
   '[Items] add',
-  props<{ item: any}>()
+  props<{ item: Partial<Item>}>()
 );
 
 export const addItemSuccess = createAction(
   '[Items] add success',
-  props<{ item: any}>()
+  props<{ item: Item}>()
 );
 
 export const addItemFailed = createAction(
   '[Items] add failed',
 );
-
-*/
 
 export const deleteItem = createAction(
   '[Items] delete',
