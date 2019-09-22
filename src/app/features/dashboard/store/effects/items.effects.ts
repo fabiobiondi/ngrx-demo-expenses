@@ -12,7 +12,7 @@ import { ItemsService } from '../../services/items.service';
 @Injectable()
 export class ItemsEffects {
 
-  loadItems$ = createEffect(() => this.actions$.pipe(
+  /*loadItems$ = createEffect(() => this.actions$.pipe(
     ofType(loadItems),
     mergeMap(() => this.itemsService.loadItems()
       .pipe(
@@ -40,7 +40,7 @@ export class ItemsEffects {
         catchError( () => of(addItemFailed()))
       )
     )
-  ));
+  ));*/
 
   constructor(
     private actions$: Actions,

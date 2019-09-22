@@ -5,6 +5,7 @@ import { DashboardState } from '../../dashboard.module';
 import { getFilterConfig, getUi } from './ui.selector';
 import { UiFilterState, UiState } from '../reducers/ui.reducer';
 
+/*
 
 export const getItems = createSelector(
   getDashboard,
@@ -30,5 +31,6 @@ export const getTotal = createSelector(
       return acc + +curr.amount;
     }, 0)
 );
+*/
 
 

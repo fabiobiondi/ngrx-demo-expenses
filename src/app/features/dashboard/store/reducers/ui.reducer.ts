@@ -33,7 +33,7 @@ const initialState: UiState = {
 
 export const uiReducer = createReducer(
   initialState,
-  on(openFilterPanel, state => ({ ...state, filter: { ...state.filter, isOpen: true} })),
+  /*on(openFilterPanel, state => ({ ...state, filter: { ...state.filter, isOpen: true} })),
   on(closeFilterPanel, state => ({ ...initialState, filter: { ...initialState.filter, isOpen: false} })),
-  on(setFilter, (state, action) => ({ ...state, filter: { ... action.filter } })),
+  on(setFilter, (state, action) => ({ ...state, filter: { ... action.filter } })),*/
 );

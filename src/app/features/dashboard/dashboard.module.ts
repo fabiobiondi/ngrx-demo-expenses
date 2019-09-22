@@ -15,6 +15,7 @@ import { ItemsFiltersComponent } from './components/items-filters.component';
 import { ItemsListComponent } from './components/items-list.component';
 import { ItemsFormComponent } from './components/items-form.component';
 import { ItemsService } from './services/items.service';
+import { categoriesReducer } from './store/reducers/categories.reducer';
 
 
 export interface DashboardState {

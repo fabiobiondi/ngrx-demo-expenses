@@ -10,7 +10,7 @@ const initialState: Item[] = [];
 
 export const productReducer = createReducer(
   initialState,
-  on(loadItemsSuccess, (state, action) => [...action.items ]),
+  /*on(loadItemsSuccess, (state, action) => [...action.items ]),
   on(deleteItemSuccess, (state, action) => state.filter(p => p.id !== action.id)),
-  on(addItemSuccess, (state, action) => [...state, { ...action.item }]),
+  on(addItemSuccess, (state, action) => [...state, { ...action.item }]),*/
 );

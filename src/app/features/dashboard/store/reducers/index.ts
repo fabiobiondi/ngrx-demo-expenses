@@ -5,9 +5,13 @@ import { categoriesReducer } from './categories.reducer';
 import { uiReducer } from './ui.reducer';
 
 export const reducers: ActionReducerMap<DashboardState> = {
-  items: productReducer,
+  /*items: productReducer,
   categories: categoriesReducer,
-  ui: uiReducer
+  ui: uiReducer*/
+
+  items: () => [{}, {}, {}],
+  categories: categoriesReducer,
+  ui: () => ({ filter: {}, report: {}})
 };
 
 export const getDashboard = createFeatureSelector<DashboardState>('dashboard');
