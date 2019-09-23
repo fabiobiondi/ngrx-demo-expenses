@@ -1,19 +1,7 @@
 import { Component } from '@angular/core';
-import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-// actions
-import { addItem, deleteItem, loadItems } from './store/actions/items.actions';
-import { closeFilterPanel, openFilterPanel, setFilter } from './store/actions/ui.actions';
-// selectors
-import { getTotal, getItemsFiltered } from './store/selectors/items.selector';
-import { getCategories } from './store/selectors/categories.selector';
-import { getFilterConfig } from './store/selectors/ui.selector';
-// model
-import { AppState } from '../../app.module';
 import { UiFilterState } from './store/reducers/ui.reducer';
 import { Item } from '../../model/item';
-import { DashboardState } from './dashboard.module';
-import { getDashboard } from './store/reducers';
 
 @Component({
   selector: 'fb-dashboard',
