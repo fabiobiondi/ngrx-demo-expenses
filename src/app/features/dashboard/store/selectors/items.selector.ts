@@ -6,7 +6,49 @@ import { getFilterConfig, getUi } from './ui.selector';
 import { UiFilterState, UiState } from '../reducers/ui.reducer';
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
+
+export const getTotal = createSelector(
+  getItems,
+  (state: Item[]) => state.reduce((acc: number, curr: Item) => {
+    return acc + +curr.amount;
+  }, 0)
+);
+
+
 export const getItemsFiltered = createSelector(
   getItems,
   getFilterConfig,
