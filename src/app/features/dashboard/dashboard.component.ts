@@ -11,7 +11,7 @@ import { Item } from '../../model/item';
     
     <fb-items-form
       [categories]="categories$ | async"
-    (save)="saveItem($event)"
+      (save)="saveItem($event)"
     ></fb-items-form>
     
     <fb-items-filters
