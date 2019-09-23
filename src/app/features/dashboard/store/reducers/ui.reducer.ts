@@ -11,13 +11,8 @@ export interface UiFilterState {
   minAmount: number;
 }
 
-export interface UiReportState {
-  isOpen: boolean;
-}
-
 export interface UiState {
   filter: UiFilterState;
-  report: UiReportState;
 }
 
 const initialState: UiState = {
@@ -26,14 +21,11 @@ const initialState: UiState = {
     category: null,
     minAmount: 0
   },
-  report: {
-    isOpen: false
-  }
 };
 
 export const uiReducer = createReducer(
   initialState,
   on(openFilterPanel, state => ({ ...state, filter: { ...state.filter, isOpen: true} })),
-  on(closeFilterPanel, state => ({ ...initialState, filter: { ...initialState.filter, isOpen: false} })),
+  on(closeFilterPanel, () => ({ ...initialState, filter: { ...initialState.filter, isOpen: false} })),
   on(setFilter, (state, action) => ({ ...state, filter: { ... action.filter } })),
 );
