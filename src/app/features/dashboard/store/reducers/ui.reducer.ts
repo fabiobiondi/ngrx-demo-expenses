@@ -12,7 +12,6 @@ export interface UiReportState {
 
 export interface UiState {
   filter: UiFilterState;
-  report: UiReportState;
 }
 
 const initialState: UiState = {
@@ -21,9 +20,6 @@ const initialState: UiState = {
     category: null,
     minAmount: 0
   },
-  report: {
-    isOpen: false
-  }
 };
 
 export const uiReducer = createReducer(
