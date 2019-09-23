@@ -6,6 +6,6 @@ import {
 
 const initialState: Item[] = [];
 
-export const productReducer = createReducer(
+export const itemsReducer = createReducer(
   initialState,
 );

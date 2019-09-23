@@ -6,10 +6,6 @@ export interface UiFilterState {
   minAmount: number;
 }
 
-export interface UiReportState {
-  isOpen: boolean;
-}
-
 export interface UiState {
   filter: UiFilterState;
 }

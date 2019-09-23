@@ -1,20 +1,8 @@
 import { createAction, props } from '@ngrx/store';
 import { Item } from '../../../../model/item';
 
-export const loadItems = createAction(
-  '[Items] load'
-);
+// LOAD ACTIONS HERE
 
-export const loadItemsSuccess = createAction(
-  '[Items] load success',
-  props<{ items: Item[]}>()
-);
-
-export const loadItemsFailed = createAction(
-  '[Items] load failed',
-);
-
-/*
 export const addItem = createAction(
   '[Items] add',
   props<{ item: Partial<Item>}>()
@@ -28,7 +16,6 @@ export const addItemSuccess = createAction(
 export const addItemFailed = createAction(
   '[Items] add failed',
 );
-*/
 
 export const deleteItem = createAction(
   '[Items] delete',

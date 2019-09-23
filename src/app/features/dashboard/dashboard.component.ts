@@ -35,33 +35,28 @@ import { Item } from '../../model/item';
   `,
 })
 export class DashboardComponent {
-  items$: Observable<Item[]> ; // = this.store.pipe(select(getItemsFiltered));
-  categories$: Observable<string[]> ; // = this.store.pipe(select(getCategories));
-  filter$: Observable<UiFilterState> ; // = this.store.pipe(select(getFilterConfig));
+  items$: Observable<Item[]> ;
+  categories$: Observable<string[]> ;
+  filter$: Observable<UiFilterState> ;
 
 
   saveItem(item: Partial<Item> ) {
     console.log(item);
-    // this.store.dispatch(addItem({ item }));
   }
 
   deleteItem(id: number) {
     console.log(id);
-    // this.store.dispatch(deleteItem({ id }));
   }
 
   setFilterHandler(filter: UiFilterState) {
     console.log(filter);
-    // this.store.dispatch(setFilter({ filter }));
   }
 
   openFilterPanelHandler() {
     console.log('open filter panel');
-    // this.store.dispatch(openFilterPanel());
   }
 
   closeFilterPanelHandler() {
     console.log('open filter panel');
-    // this.store.dispatch(closeFilterPanel());
   }
 }
