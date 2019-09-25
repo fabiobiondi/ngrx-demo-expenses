@@ -3,9 +3,6 @@ import { Item } from '../../../../model/item';
 import {
 
 } from '../actions/items.actions';
-import { loadItemsSuccess } from '../actions/items.actions';
-import { deleteItemSuccess } from '../actions/items.actions';
-import { addItemSuccess } from '../actions/items.actions';
 
 const initialState: Item[] = [];
 
