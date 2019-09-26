@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 
 export interface AppState {
   auth: { token: string, role: string};
+  profile: { name: string };
 }
 
 @NgModule({
