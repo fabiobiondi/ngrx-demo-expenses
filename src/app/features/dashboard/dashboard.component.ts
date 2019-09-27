@@ -12,6 +12,7 @@ import { getFilterConfig } from './store/selectors/ui.selector';
 import { AppState } from '../../app.module';
 import { UiFilterState } from './store/reducers/ui.reducer';
 import { Item } from '../../model/item';
+import { DashboardState } from './dashboard.module';
 
 @Component({
   selector: 'fb-dashboard',
@@ -50,7 +51,7 @@ export class ItemsComponent {
   filter$: Observable<UiFilterState> = this.store.pipe(select(getFilterConfig));
   total$: Observable<number> = this.store.pipe(select(getTotal));
 
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store<DashboardState>) {
     this.store.dispatch(loadItems());
   }
 
