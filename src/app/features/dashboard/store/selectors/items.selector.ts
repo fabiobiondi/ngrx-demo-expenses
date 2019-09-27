@@ -40,6 +40,11 @@ import { UiFilterState, UiState } from '../reducers/ui.reducer';
 
 
 /*
+export const getItems = createSelector(
+  getDashboard,
+  (state: DashboardState) => state.items
+);
+
 
 export const getTotal = createSelector(
   getItems,

@@ -60,3 +60,39 @@ export class DashboardComponent {
     console.log('open filter panel');
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+/*
+constructor(private store: Store<DashboardState>) {
+  this.store.dispatch(loadItems())
+}
+
+
+saveItem(item: Partial<Item> ) {
+  this.store.dispatch(addItem({ item }));
+}
+
+deleteItem(id: number) {
+  this.store.dispatch(deleteItem({ id }));
+}
+
+setFilterHandler(filter: UiFilterState) {
+  this.store.dispatch(setFilter({ filter }));
+}
+
+openFilterPanelHandler() {
+  this.store.dispatch(openFilterPanel());
+}
+
+closeFilterPanelHandler() {
+  this.store.dispatch(closeFilterPanel());
+}*/
