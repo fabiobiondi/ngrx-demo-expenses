@@ -9,6 +9,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { reducers } from './store/reducers';
 import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './navbar.component';
 
 export interface AppState {
   auth: { token: string, role: string};
@@ -16,7 +17,8 @@ export interface AppState {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +30,10 @@ export interface AppState {
     }),
     EffectsModule.forRoot([]),
     RouterModule.forRoot([
-      { path: '', loadChildren: './features/dashboard/dashboard.module#DashboardModule'}
+      { path: '', loadChildren: './features/home/home.module#HomeModule'},
+      { path: 'dashboard', loadChildren: './features/dashboard/dashboard.module#DashboardModule'}
     ])
+
   ],
   providers: [],
   bootstrap: [AppComponent]
