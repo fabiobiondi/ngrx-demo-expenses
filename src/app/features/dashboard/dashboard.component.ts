@@ -11,7 +11,7 @@ import { Item } from '../../model/item';
     
     <fb-items-form
       [categories]="categories$ | async"
-      (save)="saveItem($event)"
+      (save)="saveItemHandler($event)"
     ></fb-items-form>
     
     <fb-items-filters
@@ -24,7 +24,7 @@ import { Item } from '../../model/item';
 
     <fb-items-list
       [items]="items$ | async"
-      (delete)="deleteItem($event)"
+      (delete)="deleteItemHandler($event)"
     ></fb-items-list>
     
     <div class="d-flex justify-content-end">
@@ -40,11 +40,11 @@ export class DashboardComponent {
   filter$: Observable<UiFilterState> ;
 
 
-  saveItem(item: Partial<Item> ) {
+  saveItemHandler(item: Partial<Item> ) {
     console.log(item);
   }
 
-  deleteItem(id: number) {
+  deleteItemHandler(id: number) {
     console.log(id);
   }
 
@@ -77,11 +77,11 @@ constructor(private store: Store<DashboardState>) {
 }
 
 
-saveItem(item: Partial<Item> ) {
+saveItemHandler(item: Partial<Item> ) {
   this.store.dispatch(addItem({ item }));
 }
 
-deleteItem(id: number) {
+deleteItemHandler(id: number) {
   this.store.dispatch(deleteItem({ id }));
 }
 

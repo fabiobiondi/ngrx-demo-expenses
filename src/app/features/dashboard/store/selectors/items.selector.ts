@@ -1,11 +1,3 @@
-import { createSelector } from '@ngrx/store';
-import { Item } from '../../../../model/item';
-import { getDashboard } from '../reducers';
-import { DashboardState } from '../../dashboard.module';
-import { getFilterConfig, getUi } from './ui.selector';
-import { UiFilterState, UiState } from '../reducers/ui.reducer';
-
-
 
 
 
