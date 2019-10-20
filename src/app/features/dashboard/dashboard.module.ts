@@ -27,6 +27,7 @@ export interface DashboardState {
     DashboardRoutingModule,
     FormsModule,
     DashboardRoutingModule,
+    // expences-01-store-demo-fake
     EffectsModule.forFeature([
       ItemsEffects
     ]),

@@ -35,11 +35,14 @@ import { Item } from '../../model/item';
   `,
 })
 export class DashboardComponent {
-  items$: Observable<Item[]> ;
+  // expences-11-get-dashboard-selector
+  items$: Observable<Item[]> ;            // expences-33-selector-usage-get-items
   categories$: Observable<string[]> ;
-  filter$: Observable<UiFilterState> ;
+  filter$: Observable<UiFilterState> ;    // expences-60-filter-dispatch-actions
 
+  // expences-10-constructor-store
 
+  // expences-40-emit-actions-delete-save
   saveItemHandler(item: Partial<Item> ) {
     console.log(item);
   }
