@@ -38,7 +38,7 @@ export class DashboardComponent {
   // expences-11-get-dashboard-selector
   items$: Observable<Item[]> ;            // expences-33-selector-usage-get-items
   categories$: Observable<string[]> ;
-  filter$: Observable<UiFilterState> ;    // expences-60-filter-dispatch-actions
+  filter$: Observable<UiFilterState> ;    // expences-61-filter-usage-selector
 
   // expences-10-constructor-store
 
@@ -51,6 +51,7 @@ export class DashboardComponent {
     console.log(id);
   }
 
+  // expences-60-filter-dispatch-actions
   setFilterHandler(filter: UiFilterState) {
     console.log(filter);
   }
