@@ -24,16 +24,13 @@ export interface DashboardState {
   declarations: [DashboardComponent, ItemsFiltersComponent, ItemsListComponent, ItemsFormComponent],
   imports: [
     CommonModule,
-    DashboardRoutingModule,
     FormsModule,
-    DashboardRoutingModule,
     // expences-01-store-demo-fake
     EffectsModule.forFeature([
       ItemsEffects
     ]),
+    DashboardRoutingModule,
   ],
-  providers: [
-    ItemsService
-  ]
+  providers: [ ItemsService ]
 })
 export class DashboardModule { }
