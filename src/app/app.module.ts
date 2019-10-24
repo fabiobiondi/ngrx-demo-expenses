@@ -31,8 +31,8 @@ export interface AppState {
     }),
     EffectsModule.forRoot([]),
     RouterModule.forRoot([
-      { path: '', loadChildren: './features/home/home.module#HomeModule'},
-      { path: 'dashboard', loadChildren: './features/dashboard/dashboard.module#DashboardModule'}
+      { path: 'dashboard', loadChildren: () => import('./features/dashboard/dashboard.module').then(m => m.DashboardModule)},
+      { path: '', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)},
     ])
   ],
   providers: [],
