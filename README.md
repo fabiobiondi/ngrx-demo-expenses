@@ -1,27 +1,24 @@
-# NgrxTutorials
+## "Expenses Manager" Angular & NGRX8 Demo - Codemomtion 2019
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+A simple application created in Angular 8 and NGRRX 8 to demonstrate how NGRX works and how to handle:
 
-## Development server
+* store `forRoot` and `forFeatures` 
+* actions
+* reducers 
+* effects
+* selectors
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## USAGE
 
-## Code scaffolding
+1) Clone this repository
+2) `npm install`
+3) `npm start`
+4) Open another terminal and run a REST Mock server: `npm run server`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## NOTES:
 
-## Build
+This application is not completed and there are missing parts:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Authentication is fake
+* Some reducers must be completed
+* Folder structure is simplified and not fully compliants with Angular's best practices
